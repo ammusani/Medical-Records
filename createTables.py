@@ -64,7 +64,7 @@ def create_tables():
 
     try:
         cfg = ConfigParser.ConfigParser()
-        cfg.read('config.ini')
+        cfg.read('data/config.ini')
         conn = psycopg2.connect(database = cfg.get('MedData', 'database'), user = cfg.get('MedData', 'user'), password = cfg.get('MedData', 'password'), host = cfg.get('MedData', 'host'), port = cfg.get('MedData', 'port'))  #Making the Connection
         
         curr = conn.cursor()

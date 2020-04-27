@@ -11,7 +11,7 @@ def create_db():
     
     try:
         cfg = ConfigParser.ConfigParser()
-        cfg.read('config.ini')
+        cfg.read('data/config.ini')
         conn = psycopg2.connect(user = cfg.get('MedData', 'user'), password = cfg.get('MedData', 'password'))
         conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT);
         curr = conn.cursor()
@@ -29,4 +29,3 @@ def create_db():
     finally:
         if conn is not None:
             conn.close()
-
