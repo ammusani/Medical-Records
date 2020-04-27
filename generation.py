@@ -5,7 +5,7 @@ from insertPatient import insert_patient
 from dropDB import drop_db
 from insertStatus import insert_status
 
-drop_db()
+
 create_db()
 create_tables()
 insert_country()
